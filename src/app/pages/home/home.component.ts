@@ -1,12 +1,12 @@
 import { Component, signal, computed, effect } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Task } from '../interfaces/task.interface';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

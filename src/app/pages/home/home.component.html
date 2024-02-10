@@ -17,11 +17,11 @@
     <!-- This section should be hidden by default and shown when there are todos -->
     <section class="main">
       <ul class="todo-list">
+        @for (task of tasksFiltered(); track task; let i = $index) {
         <li
           (dblclick)="editTaskToggle(task.id)"
           [class.editing]="task.editing"
           [class.completed]="task.completed"
-          *ngFor="let task of tasksFiltered(); index as i"
         >
           <div class="view">
             <input
@@ -39,6 +39,7 @@
             [value]="task.title"
           />
         </li>
+        }
       </ul>
     </section>
     <!-- This footer should be hidden by default and shown when there are todos -->
